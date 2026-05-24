@@ -238,3 +238,88 @@ footer {
     font-weight: bold;
     color: #555;
 }
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+    body {
+        background-color: white;
+    }
+
+    .page {
+        width: 100%;
+        margin: 0;
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .logo {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 120px;
+        height: auto;
+        margin-top: 0;
+    }
+
+    nav {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav a {
+        display: inline-block;
+        font-size: 14px;
+        padding: 8px;
+        margin: 2px;
+    }
+
+    main {
+        padding: 18px 12px 0;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    .home-grid,
+    .course-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card img,
+    .course-card img,
+    .reviews img {
+        width: 100%;
+        height: auto;
+    }
+
+    .club-row {
+        flex-direction: column;
+    }
+
+    .club-row img,
+    .club-info {
+        width: 100%;
+    }
+
+    button {
+        width: 80%;
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
