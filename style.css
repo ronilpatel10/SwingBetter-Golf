@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1f1f1f;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+    width: 430px;
+    background-color: white;
+    margin: 30px auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #144a33;
+    height: 65px;
+}
+
+.logo {
+    width: 115px;
+    height: 65px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 100px;
+    height: 70px;
+    margin-top: 6px;
+    display: block;
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 0 5px;
+}
+
+main {
+    text-align: center;
+    padding: 18px 15px 0;
+}
+
+h1 {
+    font-size: 28px;
+    color: #144a33;
+    margin-bottom: 8px;
+}
+
+h3 {
+    color: #444;
+    font-size: 14px;
+    margin-bottom: 18px;
+    line-height: 1.3;
+}
+
+button {
+    background-color: #d4a62a;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    background-color: #d9d9d9;
+    color: #144a33;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px;
+    min-height: 45px;
+}
+
+.card img {
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+}
+
+.card p {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    padding: 8px 4px 12px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #144a33;
+    gap: 14px;
+    padding: 14px;
+}
+
+.course-card {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.course-card h3 {
+    color: #144a33;
+    font-size: 15px;
+    min-height: 40px;
+    margin-bottom: 10px;
+}
+
+.course-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.course-card p {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    padding-top: 8px;
+    min-height: 45px;
+}
+
+.reviews {
+    background-color: white;
+    border-top: 14px solid #144a33;
+}
+
+.reviews h2 {
+    background-color: #d9d9d9;
+    color: #144a33;
+    font-size: 16px;
+    padding: 7px;
+}
+
+.reviews img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.reviews p {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+    padding: 6px;
+}
+
+.login-logo {
+    width: 150px;
+    margin: 10px auto 20px;
+}
+
+.login-card {
+    background-color: white;
+    padding: 20px;
+    margin: 0 auto 25px;
+    width: 85%;
+    border: 2px solid #144a33;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #999;
+}
+
+.login-card button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #144a33;
+    color: white;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 7px;
+}
+/* CLUBS PAGE */
+.club-row {
+    display: flex;
+    margin-bottom: 3px;
+}
+
+.club-row img {
+    width: 50%;
+    height: 80px;
+    object-fit: cover;
+}
+
+.club-info {
+    width: 50%;
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.club-info h3 {
+    color: #144a33;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.club-info p {
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+}
