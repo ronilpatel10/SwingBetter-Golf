@@ -26,30 +26,95 @@
         </header>
 
         <main>
+            <h1>Golf Course Guides</h1>
+            <p class="intro-text">
+                Find golf courses to play online and near Columbia, SC.
+            </p>
 
             <section class="course-grid">
 
                 <div class="course-card">
                     <h3>PGA 2K25<br>Courses</h3>
                     <img src="images/pga2k25courses.png" alt="PGA 2K25 golf course">
-                    <p>Fun courses to play with friends in PGA 2K25.</p>
+                    <p>Fun virtual courses to play with friends in PGA 2K25.</p>
+
+                    <a href="https://www.google.com/search?q=best+PGA+2K25+courses"
+                       target="_blank"
+                       class="course-button">
+                        View PGA 2K25 Courses
+                    </a>
                 </div>
 
                 <div class="course-card">
-                    <h3>Local Courses</h3>
-                    <img src="images/courseguide.png" alt="Local golf course">
+                    <h3>Columbia, SC<br>Courses</h3>
+                    <img src="images/courseguide.png" alt="Golf course near Columbia SC">
                     <p>Find beginner-friendly golf courses near Columbia, SC.</p>
+
+                    <a href="https://www.google.com/search?q=golf+courses+near+Columbia+SC"
+                       target="_blank"
+                       class="course-button">
+                        View Local Courses
+                    </a>
                 </div>
 
             </section>
 
-            <section class="reviews">
-                <h2>Course Reviews</h2>
+            <section class="local-list">
+                <h2>Popular Local Courses</h2>
 
-                <img src="images/coursereview.png" alt="Golf course review">
-
-                <p>See top-rated courses and playing tips.</p>
+                <ul>
+                    <li>Cobblestone Park Golf Club</li>
+                    <li>LinRick Golf Course</li>
+                    <li>Oak Hills Golf Club</li>
+                    <li>Golden Hills Golf & Country Club</li>
+                    <li>Charwood Golf Club</li>
+                </ul>
             </section>
+
+            <section class="reviews">
+    <details class="review-dropdown">
+        <summary>View Course Reviews</summary>
+
+        <div class="review-card">
+            <h3>Cobblestone Park Golf Club</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>Great course with clean greens and a nice layout.</p>
+        </div>
+
+        <div class="review-card">
+            <h3>LinRick Golf Course</h3>
+            <p>⭐⭐⭐⭐☆</p>
+            <p>Beginner-friendly course with affordable prices.</p>
+        </div>
+
+        <div class="review-card">
+            <h3>Golden Hills Golf Club</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>Fun course with good scenery and challenging holes.</p>
+        </div>
+    </details>
+
+    <div class="add-review-box">
+        <h2>Add a Course Review</h2>
+
+        <form>
+            <input type="text" placeholder="Course Name">
+
+            <select>
+                <option>Select Rating</option>
+                <option>⭐⭐⭐⭐⭐ - 5 Stars</option>
+                <option>⭐⭐⭐⭐ - 4 Stars</option>
+                <option>⭐⭐⭐ - 3 Stars</option>
+                <option>⭐⭐ - 2 Stars</option>
+                <option>⭐ - 1 Star</option>
+            </select>
+
+            <textarea placeholder="Thoughts on the course"></textarea>
+
+            <button type="button">Submit Review</button>
+        </form>
+    </div>
+</section>
 
         </main>
 

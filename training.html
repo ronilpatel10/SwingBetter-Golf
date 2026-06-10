@@ -26,25 +26,57 @@
 
         <main>
             <h1>Golf Training Plans</h1>
+            <p class="intro-text">
+                Use these videos and quick tips to practice different parts of your golf game.
+            </p>
 
             <section class="home-grid">
-                <div class="card">
-                    <div class="card-title">Beginner<br>Drills</div>
-                    <img src="images/beginnerdrills.png" alt="Golfer practicing beginner drills">
-                    <p>Learn golf basics and improve consistency.</p>
+
+                <div class="card training-card">
+                    <div class="card-title">Driver<br>Training</div>
+                    <img src="images/DrivingAccuracy.png" alt="Golfer hitting a driver">
+                    <p>Work on distance, balance, and hitting straighter tee shots.</p>
+
+                    <button class="button" onclick="openVideo('https://www.youtube.com/embed/TQ0iiSVNISw')">
+                        Watch Video
+                    </button>
+
+                    <details class="tips-dropdown">
+                        <summary>Quick Tips</summary>
+                        <p>Keep your feet shoulder-width apart, swing smooth, and focus on solid contact instead of swinging too hard.</p>
+                    </details>
                 </div>
 
-                <div class="card">
+                <div class="card training-card">
+                    <div class="card-title">Iron<br>Training</div>
+                    <img src="images/beginnerdrills.png" alt="Golfer practicing iron shots">
+                    <p>Improve accuracy, ball contact, and control with your irons.</p>
+
+                    <button class="button" onclick="openVideo('https://www.youtube.com/embed/L2kEluxm7BI')">
+                        Watch Video
+                    </button>
+
+                    <details class="tips-dropdown">
+                        <summary>Quick Tips</summary>
+                        <p>Hit down on the ball, keep your head steady, and finish balanced after every swing.</p>
+                    </details>
+                </div>
+
+                <div class="card training-card">
                     <div class="card-title">Putting<br>Practice</div>
                     <img src="images/puttingpractice.png" alt="Golf ball near the hole">
-                    <p>Improve accuracy and short game skills.</p>
+                    <p>Build better distance control and improve short putts.</p>
+
+                    <button class="button" onclick="openVideo('https://www.youtube.com/embed/Mz7IggUH5VM?start=45')">
+                        Watch Video
+                    </button>
+
+                    <details class="tips-dropdown">
+                        <summary>Quick Tips</summary>
+                        <p>Keep your stroke smooth, watch your alignment, and practice short putts from 3 to 6 feet.</p>
+                    </details>
                 </div>
 
-                <div class="card">
-                    <div class="card-title">Driving<br>Accuracy</div>
-                    <img src="images/DrivingAccuracy.png" alt="Golfer hitting a drive">
-                    <p>Build distance and hit straighter shots.</p>
-                </div>
             </section>
         </main>
 
@@ -53,5 +85,29 @@
             <p>Contact | About | Social Media</p>
         </footer>
     </div>
+
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeVideo()">&times;</span>
+            <iframe id="videoFrame" width="100%" height="315"
+                src=""
+                title="Golf Training Video"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        function openVideo(videoUrl) {
+            document.getElementById("videoFrame").src = videoUrl;
+            document.getElementById("videoModal").style.display = "block";
+        }
+
+        function closeVideo() {
+            document.getElementById("videoFrame").src = "";
+            document.getElementById("videoModal").style.display = "none";
+        }
+    </script>
 </body>
 </html>
