@@ -4,27 +4,35 @@
     box-sizing: border-box;
 }
 
+html,
 body {
-    background-color: #1f1f1f;
+    min-height: 100%;
+}
+
+body {
+    background-color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .page {
-    width: 430px;
+    width: 100%;
+    min-height: 100vh;
     background-color: white;
-    margin: 30px auto;
+    margin: 0 auto;
 }
+
+/* HEADER */
 
 header {
     display: flex;
     align-items: center;
     background-color: #144a33;
-    height: 65px;
+    min-height: 80px;
 }
 
 .logo {
-    width: 115px;
-    height: 65px;
+    width: 160px;
+    min-height: 80px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -32,9 +40,8 @@ header {
 }
 
 .logo img {
-    width: 100px;
-    height: 70px;
-    margin-top: 6px;
+    width: 120px;
+    height: auto;
     display: block;
 }
 
@@ -46,82 +53,217 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 12px;
-    margin: 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 15px;
 }
+
+nav a:hover {
+    color: #d4a62a;
+}
+
+/* MAIN */
 
 main {
     text-align: center;
-    padding: 18px 15px 0;
+    padding: 30px 35px;
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 42px;
     color: #144a33;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+h2 {
+    color: #144a33;
 }
 
 h3 {
     color: #444;
-    font-size: 14px;
-    margin-bottom: 18px;
-    line-height: 1.3;
+    font-size: 20px;
+    margin-bottom: 25px;
+    line-height: 1.4;
 }
 
-button {
+button,
+.button {
     background-color: #d4a62a;
     color: white;
     border: none;
-    padding: 10px 30px;
+    padding: 14px 36px;
     font-weight: bold;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    text-decoration: none;
+    display: inline-block;
 }
+
+button:hover,
+.button:hover {
+    background-color: #b88d20;
+}
+
+/* HOME / CARD GRID */
 
 .home-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+    gap: 24px;
+    margin-top: 10px;
 }
 
 .card {
     display: flex;
     flex-direction: column;
+    background-color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card-title {
     background-color: #d9d9d9;
     color: #144a33;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
-    padding: 8px;
-    min-height: 45px;
+    padding: 12px;
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card img {
     width: 100%;
-    height: 135px;
+    height: 260px;
     object-fit: cover;
 }
 
 .card p {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     color: #333;
-    padding: 8px 4px 12px;
+    padding: 14px 8px 18px;
+    line-height: 1.4;
 }
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: contents;
+}
+
+/* HOME TIP SECTION */
+
+.tip-section {
+    width: 90%;
+    margin: 30px auto 20px;
+    padding: 25px;
+    background-color: #d9d9d9;
+    border-left: 8px solid #144a33;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.tip-section h2 {
+    color: #144a33;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tip-section p {
+    color: #333;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* TRAINING PAGE */
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+.training-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 540px;
+}
+
+.training-card img {
+    width: 100%;
+    height: 50%;
+    max-height: 280px;
+}
+
+.training-card p {
+    min-height: 60px;
+}
+
+.training-card .button {
+    display: block;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 14px;
+    padding: 14px 10px;
+    background-color: #0f5132;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.training-card .button:hover {
+    background-color: #198754;
+}
+
+.tips-dropdown {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    background-color: #f0f7f0;
+    border-left: 6px solid #2e7d32;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.tips-dropdown summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #2e7d32;
+    font-size: 16px;
+    list-style-position: inside;
+}
+
+.tips-dropdown p {
+    font-size: 15px;
+    font-weight: normal;
+    padding: 8px 0 0;
+}
+
+/* COURSES PAGE */
 
 .course-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: #144a33;
-    gap: 14px;
-    padding: 14px;
+    gap: 24px;
+    padding: 24px;
 }
 
 .course-card {
     background-color: white;
-    padding: 10px;
+    padding: 18px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -129,24 +271,67 @@ button {
 
 .course-card h3 {
     color: #144a33;
-    font-size: 15px;
-    min-height: 40px;
-    margin-bottom: 10px;
+    font-size: 22px;
+    min-height: 50px;
+    margin-bottom: 12px;
 }
 
 .course-card img {
     width: 100%;
-    height: 120px;
+    height: 260px;
     object-fit: cover;
 }
 
 .course-card p {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     color: #333;
-    padding-top: 8px;
-    min-height: 45px;
+    padding-top: 12px;
+    min-height: 55px;
 }
+
+.course-button {
+    display: block;
+    background-color: #144a33;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 5px;
+}
+
+.course-button:hover {
+    background-color: #198754;
+}
+
+.local-list {
+    background-color: #d9d9d9;
+    margin: 20px 0;
+    padding: 20px;
+    border-left: 8px solid #144a33;
+    text-align: left;
+}
+
+.local-list h2 {
+    color: #144a33;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.local-list ul {
+    padding-left: 30px;
+}
+
+.local-list li {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* REVIEWS */
 
 .reviews {
     background-color: white;
@@ -156,67 +341,90 @@ button {
 .reviews h2 {
     background-color: #d9d9d9;
     color: #144a33;
-    font-size: 16px;
-    padding: 7px;
+    font-size: 24px;
+    padding: 12px;
 }
 
 .reviews img {
     width: 100%;
-    height: 120px;
+    height: 240px;
     object-fit: cover;
 }
 
 .reviews p {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: bold;
     color: #333;
-    padding: 6px;
+    padding: 10px;
 }
 
-.login-logo {
-    width: 150px;
-    margin: 10px auto 20px;
+.review-dropdown {
+    background-color: #d9d9d9;
+    padding: 18px;
+    border-left: 8px solid #144a33;
+    text-align: left;
 }
 
-.login-card {
+.review-dropdown summary {
+    color: #144a33;
+    font-weight: bold;
+    font-size: 22px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.review-card {
     background-color: white;
-    padding: 20px;
-    margin: 0 auto 25px;
-    width: 85%;
-    border: 2px solid #144a33;
+    margin-top: 12px;
+    padding: 14px;
+    border-radius: 5px;
 }
 
-.login-card input {
+.review-card h3 {
+    color: #144a33;
+    margin-bottom: 6px;
+}
+
+.add-review-box {
+    background-color: #f0f7f0;
+    padding: 18px;
+    margin-top: 16px;
+    border-radius: 6px;
+}
+
+.add-review-box h2 {
+    color: #144a33;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.add-review-box input,
+.add-review-box select,
+.add-review-box textarea {
     width: 100%;
     padding: 10px;
-    margin: 8px 0;
+    margin-bottom: 10px;
     border: 1px solid #999;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
 }
 
-.login-card button {
-    width: 100%;
-    margin-top: 10px;
+.add-review-box textarea {
+    height: 90px;
+    resize: none;
 }
 
-footer {
-    background-color: #144a33;
-    color: white;
-    text-align: center;
-    font-size: 11px;
-    font-weight: bold;
-    padding: 7px;
-}
 /* CLUBS PAGE */
 
 .club-row {
     display: flex;
     align-items: stretch;
-    margin-bottom: 8px;
+    margin-bottom: 18px;
 }
 
 .club-row img {
     width: 45%;
-    height: 180px;
+    height: 320px;
     object-fit: cover;
 }
 
@@ -226,19 +434,20 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 12px;
+    padding: 24px;
 }
 
 .club-info h3 {
     color: #144a33;
-    font-size: 14px;
-    margin-bottom: 5px;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .club-info p {
-    font-size: 12px;
+    font-size: 17px;
     font-weight: bold;
     color: #555;
+    line-height: 1.4;
 }
 
 .club-button {
@@ -248,10 +457,10 @@ footer {
     background-color: #144a33;
     color: white;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
-    padding: 8px 10px;
-    margin-top: 8px;
+    padding: 12px 10px;
+    margin-top: 12px;
     border-radius: 5px;
 }
 
@@ -260,8 +469,8 @@ footer {
 }
 
 .club-details {
-    margin-top: 8px;
-    font-size: 11px;
+    margin-top: 12px;
+    font-size: 15px;
     text-align: left;
 }
 
@@ -272,11 +481,138 @@ footer {
 }
 
 .club-details p {
-    font-size: 11px;
-    margin-top: 5px;
+    font-size: 15px;
+    margin-top: 8px;
     font-weight: normal;
 }
+
+/* LOGIN PAGE */
+
+.login-logo {
+    width: 170px;
+    margin: 15px auto 25px;
+}
+
+.login-card {
+    background-color: white;
+    padding: 28px;
+    margin: 0 auto 35px;
+    width: 50%;
+    max-width: 600px;
+    border: 2px solid #144a33;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #999;
+    font-size: 16px;
+}
+
+.login-card button {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.signup-text {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 14px 0 10px;
+    color: #333;
+}
+
+.signup-box {
+    background-color: #f0f7f0;
+    padding: 14px;
+    border-left: 6px solid #144a33;
+    text-align: left;
+}
+
+.signup-box summary {
+    color: #144a33;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.signup-box button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 25px;
+    width: 70%;
+    max-width: 800px;
+    border-radius: 8px;
+}
+
+.close {
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #144a33;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 14px;
+    margin-top: 0;
+}
+.training-home-img {
+    object-fit: cover;
+    object-position: 35% center;
+}
+.training-card:first-child img {
+    object-position: 35% center;
+}
 /* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .home-grid,
+    .course-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .login-card {
+        width: 80%;
+    }
+
+    .club-row {
+        flex-direction: column;
+    }
+
+    .club-row img,
+    .club-info {
+        width: 100%;
+    }
+}
+
 @media (max-width: 600px) {
     body {
         background-color: white;
@@ -317,331 +653,47 @@ footer {
     }
 
     main {
-        padding: 18px 12px 0;
+        padding: 18px 12px;
     }
 
     h1 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
-    h3 {
-        font-size: 14px;
-    }
-
-    .home-grid,
-    .course-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
+    h3,
+    .intro-text {
+        font-size: 15px;
     }
 
     .card img,
     .course-card img,
-    .reviews img {
+    .reviews img,
+    .training-card img {
         width: 100%;
         height: auto;
     }
 
-    .club-row {
-        flex-direction: column;
+    .training-card {
+        min-height: auto;
     }
 
-    .club-row img,
-    .club-info {
-        width: 100%;
+    .club-row img {
+        height: auto;
     }
 
-    button {
+    button,
+    .button {
         width: 80%;
         font-size: 15px;
         padding: 12px;
+    }
+
+    .login-card {
+        width: 95%;
     }
 
     footer {
         font-size: 12px;
         padding: 10px;
     }
-}
-.intro-text {
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 18px;
-}
-
-
-.button {
-    display: block;
-    width: 100%;
-    margin-top: auto;
-    margin-bottom: 14px;
-    padding: 10px 8px;
-    background-color: #0f5132;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 13px;
-}
-.button:hover {
-    background-color: #198754;
-}
-.tips-dropdown {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;   /* adds space above the footer */
-    background-color: #f0f7f0;
-    border-left: 5px solid #2e7d32;
-    border-radius: 6px;
-    text-align: left;
-}
-.tips-dropdown summary {
-    cursor: pointer;
-    font-weight: bold;
-    color: #2e7d32;
-    font-size: 14px;
-    list-style-position: inside;
-}
-
-.tips-dropdown p {
-    font-size: 12px;
-    font-weight: normal;
-    padding: 8px 0 0;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    padding-top: 80px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.8);
-}
-
-.modal-content {
-    background-color: white;
-    margin: auto;
-    padding: 20px;
-    width: 70%;
-    max-width: 700px;
-    border-radius: 8px;
-}
-
-.close {
-    float: right;
-    font-size: 32px;
-    font-weight: bold;
-    cursor: pointer;
-}
-.card {
-    display: flex;
-    flex-direction: column;
-    transition: transform .2s, box-shadow .2s;
-}
-.card p {
-    font-size: 12px;
-    font-weight: bold;
-    color: #333;
-    padding: 8px 4px 12px;
-}
-.card-link {
-    text-decoration: none;
-    color: inherit;
-    display: contents;
-}
-.training-card {
-    height: 350px;
-}
-
-.card {
-    transition: transform .2s, box-shadow .2s;
-}
-
-.card:hover {
-    cursor: pointer;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 5px rgba(0,0,0,.2);
-}
-
-/* TRAINING PAGE */
-.training-card {
-    display: flex;
-    flex-direction: column;
-    height: 335px;
-}
-
-.training-card p {
-    min-height: 62px;
-}
-
-.training-card .button {
-    display: block;
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 12px;
-    padding: 10px 8px;
-    background-color: #0f5132;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 13px;
-}
-
-.training-card .tips-dropdown {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    background-color: #f0f7f0;
-    border-left: 5px solid #2e7d32;
-    border-radius: 6px;
-    text-align: left;
-}
-
-/* HOME PAGE TIP */
-.tip-section {
-    width: 90%;
-    margin: 10px auto 20px;
-    padding: 15px;
-    background-color: #d9d9d9;
-    border-left: 6px solid #144a33;
-    border-radius: 6px;
-    text-align: center;
-}
-
-.tip-section h2 {
-    color: #144a33;
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.tip-section p {
-    color: #333;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 1.4;
-}
-.course-button {
-    display: block;
-    background-color: #144a33;
-    color: white;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 9px;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-.course-button:hover {
-    background-color: #198754;
-}
-
-.local-list {
-    background-color: #d9d9d9;
-    margin: 14px 0;
-    padding: 12px;
-    border-left: 6px solid #144a33;
-    text-align: left;
-}
-
-.local-list h2 {
-    color: #144a33;
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 8px;
-}
-
-.local-list ul {
-    padding-left: 25px;
-}
-
-.local-list li {
-    font-size: 13px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-.review-dropdown {
-    background-color: #d9d9d9;
-    padding: 12px;
-    border-left: 6px solid #144a33;
-    text-align: left;
-}
-
-.review-dropdown summary {
-    color: #144a33;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.review-card {
-    background-color: white;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.review-card h3 {
-    color: #144a33;
-    margin-bottom: 5px;
-}
-
-.add-review-box {
-    background-color: #f0f7f0;
-    padding: 12px;
-    margin-top: 12px;
-    border-radius: 6px;
-}
-
-.add-review-box h2 {
-    color: #144a33;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.add-review-box input,
-.add-review-box select,
-.add-review-box textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 8px;
-    border: 1px solid #999;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.add-review-box textarea {
-    height: 70px;
-    resize: none;
-}
-.signup-text {
-    font-size: 13px;
-    font-weight: bold;
-    margin: 12px 0 8px;
-    color: #333;
-}
-
-.signup-box {
-    background-color: #f0f7f0;
-    padding: 10px;
-    border-left: 5px solid #144a33;
-    text-align: left;
-}
-
-.signup-box summary {
-    color: #144a33;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-    margin-bottom: 8px;
-}
-
-.signup-box button {
-    width: 100%;
-    margin-top: 8px;
 }
